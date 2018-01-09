@@ -5,6 +5,15 @@
     <UserSecretsId>aspnet-SaturdayMP.BuddiesGameTracker-1CDAB6F6-EB6A-4A5D-B6A9-8CD3DC4B3B07</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20180109155048_CreatePlayerTable.cs" />
+    <Compile Remove="Data\Migrations\20180109155048_CreatePlayerTable.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180109155308_CreatePlayerTable.cs" />
+    <Compile Remove="Data\Migrations\20180109155308_CreatePlayerTable.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180109155739_CreatePlayerTable.cs" />
+    <Compile Remove="Data\Migrations\20180109155739_CreatePlayerTable.Designer.cs" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />

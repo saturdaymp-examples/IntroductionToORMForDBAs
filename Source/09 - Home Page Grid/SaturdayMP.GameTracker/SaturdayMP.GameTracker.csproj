@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+		<DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="VIewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Controllers\TestController.cs" />
+    <Compile Remove="Models\GameResultTypeEnums.cs" />
+    <Compile Remove="VIewModels\GamesPlayedViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Test\Index.cshtml" />
+  </ItemGroup>
+</Project>

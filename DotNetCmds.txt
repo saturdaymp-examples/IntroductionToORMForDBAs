@@ -1,0 +1,44 @@
+dotnet restore
+
+dotnet ef migrations add CreatePlayerTable
+
+dotnet ef database update
+
+-- Remove migration with max column length.
+dotnet ef database update 0
+dotnet ef migrations remove
+
+dotnet ef migrations add CreatePlayerTable
+
+-- After installing the Microsoft.VisualStudio.Web.CodeGeneration.Design package.
+
+dotnet aspnet-codegenerator controller -name PlayersController -outDir Controllers -m Player -dc GameTrackerContext -udl
+
+dotnet aspnet-codegenerator controller -name GamesController -outDir Controllers -m Game -dc GameTrackerContext -udl
+
+dotnet ef migrations add CreateGamesTable
+
+dotnet ef migrations add CreateGameResultTypesTable
+
+dotnet aspnet-codegenerator controller -name GameResultTypesController -outDir Controllers -m GameResultType -dc GameTrackerContext -udl
+
+dotnet ef migrations add CreateGamePlayersTable
+
+-- Query for finding Wins/Loses
+Select P.Name, Count(GW.Id), Count(GL.ID), COUNT(GT.ID)
+From Players P
+Left OUTER Join GamePlayers GW on P.Id = GW.PlayerId
+  And GW.GameResultTypeId = (
+    Select Id From GameResultTypes Where KeyCode = 10
+  )
+Left Outer Join GamePlayers GL on P.Id = GW.PlayerId
+  And GL.GameResultTypeId = (
+    Select Id From GameResultTypes Where KeyCode = 11
+  )
+Left Outer Join GamePlayers GT on P.Id = GW.PlayerId
+  And GT.GameResultTypeId = (
+    Select Id From GameResultTypes Where KeyCode = 12
+  )
+Group By P.Name
+
+

@@ -1,0 +1,9 @@
+version: "3"
+services:
+  game-tracker-db:
+    image: "microsoft/mssql-server-linux"
+    environment:
+      SA_PASSWORD: "Password1234!"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<SaturdayMP.GameTracker.ViewModels.PlayerWinLoss>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Wins</th>
+                <th>Loses</th>
+                <th>Ties</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var wl in Model)
+            {
+                <tr>
+                    <td>@wl.PlayerName</td>
+                    <td>@wl.Wins</td>
+                    <td>@wl.Loses</td>
+                    <td>@wl.Ties</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

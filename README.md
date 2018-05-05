@@ -1,11 +1,10 @@
 # Introduction To ORMs For DBAs
 
-The [slides](Slides) and the [source code](Source) for a lighting talk I gave for the [SQL Saturday Edmonton - Speaker Idol Contest](https://www.meetup.com/EDMPASS/events/244468043/).  I didn't win the competition but I enjoyed giving the talk and listening to the other talks.
+This is a talk I gave at [SQL Saturday 710](http://www.sqlsaturday.com/710/eventhome.aspx) that introduced DBAs to Object-Relational Mappers.  This is an enhanced version of my lighting talk that you can find by reverting this repository to the [SqlSaturdayLightingTalk tag](https://github.com/saturdaymp/IntroductionToORMForDBAs/tree/SqlSaturdayLightingTalk).  You can find the slides, my notes, and ruff draft of the current version of the talk [here](Slides).  
 
-You can find ruff draft of my talk below.  It's not exactly what I said but has the general idea.
+In the [source](Source) folder you will find sub-folders for the various stages of the demo.  The demo is creating a simple web application to track games friends are playing and figure out who has the best win/lose ratio.  It is a ASP.NET MVC Core 2.0 application and should run anywhere you can install .NET Core.  Also inculded is a docker compose file to stand up a SQL Server database.
 
-* [Part 1](https://nftb.saturdaymp.com/introduction-to-object-relational-mapping-for-dbas-part-1/)
-* [Part 2](https://nftb.saturdaymp.com/introduction-to-object-relational-mapping-for-dbas-part-2/)
-* [Part 3](https://nftb.saturdaymp.com/introduction-to-object-relational-mapping-for-dbas-part-3/)
+If you have any construtive feedback, a question, or spotted a bug please let me know by opening an [issue](https://github.com/saturdaymp/IntroductionToORMForDBAs/issues).
 
-Even though I didn't win I am still planning on submitting a longer version of this talk for [SQL Saturday #710 Edmonton](http://www.sqlsaturday.com/710/eventhome.aspx) in May.  Constructive feedback and critisim is apprecated.
+# Acknoledgements
+Thank you to [Edmonton PASS](http://edmpass.pass.org/) for letting me speak at a SQL Saturday.

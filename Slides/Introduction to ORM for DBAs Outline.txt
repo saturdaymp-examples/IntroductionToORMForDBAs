@@ -1,0 +1,89 @@
+
+Point of view for the Talk
+ - From DBA that has little to no programming experience.
+ - Has had to deal with wierd queries from ORM (example)
+ - DBA writing an application for the first time?
+
+
+
+
+What is ORM?
+  - Wiki definition
+  - Mapping relational data to objects
+  - Core problem is dealing with data in an application
+
+What is a object?
+  - Definition of class and object.
+  - Exmple of class, object, etc.
+
+What problem is it trying to solve?
+  - Translating data from relational to object
+  - Remove boiler plate code
+
+Demo
+  - Entity framwork CRUD demo.  Compare to non-ORM code?
+  - Talk about objects
+
+** Maybe?
+Types of ORM
+  - Active record vs Respository
+
+Demo
+  - Ruby on Rails
+** End Maybe
+
+Looks Easy but it's really hard
+  - Effienct queries
+  - 
+
+Ideal application archecture
+  - Service "protecting" the database.
+
+
+
+
+
+
+
+
+
+
+Quick Demo
+
+Looks Easy but it's really hard
+	- Relationals vs Objects
+		
+Active Record vs Repository
+
+Code First database design
+
+
+ - Demo Ruby on Rails (active record)
+	
+ - Demo Entity Framework
+
+Definitions:
+ - Lazy Loading
+ - Object caching
+ - Mapping
+ - Unit of Work
+ - Code First
+
+
+
+Demo should show:
+ - Code first
+ - Migration (up, down)
+ - 
+
+
+ 
+Rise and Fall of ORM
+https://maetl.net/talks/rise-and-fall-of-orm
+
+Vietnam of Computer Science
+http://blogs.tedneward.com/post/the-vietnam-of-computer-science/
+
+ORM Hate (Fowler):
+https://martinfowler.com/bliki/OrmHate.html
+

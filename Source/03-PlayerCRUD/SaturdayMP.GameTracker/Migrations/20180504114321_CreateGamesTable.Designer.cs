@@ -11,9 +11,10 @@ using System;
 namespace SaturdayMP.GameTracker.Migrations
 {
     [DbContext(typeof(GameTrackerContext))]
-    partial class GameTrackerContextModelSnapshot : ModelSnapshot
+    [Migration("20180504114321_CreateGamesTable")]
+    partial class CreateGamesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

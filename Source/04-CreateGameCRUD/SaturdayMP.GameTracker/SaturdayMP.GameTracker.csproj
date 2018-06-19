@@ -18,14 +18,5 @@
   <ItemGroup>
     <Folder Include="Data\" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="Controllers\TestController.cs" />
-    <Compile Remove="Controllers\GamesController.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Remove="Views\Test\Index.cshtml" />
-    <Content Remove="Views\Games\Create.cshtml" />
-    <Content Remove="Views\Games\Delete.cshtml" />
-    <Content Remove="Views\Games\Details.cshtml" />
-  </ItemGroup>
+
 </Project>

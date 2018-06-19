@@ -13,7 +13,5 @@ namespace SaturdayMP.GameTracker.Models
         public Game Game { get; set; }
 
         public DateTime DatePlayed { get; set; }
-
-        public ICollection<GamePlayer> GamePlayers { get; set; }
     }
 }

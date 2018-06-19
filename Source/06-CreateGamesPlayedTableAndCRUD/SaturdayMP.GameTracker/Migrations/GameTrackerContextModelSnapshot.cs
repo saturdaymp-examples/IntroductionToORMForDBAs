@@ -33,23 +33,7 @@ namespace SaturdayMP.GameTracker.Migrations
                     b.ToTable("Games");
                 });
 
-            modelBuilder.Entity("SaturdayMP.GameTracker.Models.GamePlayed", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("DatePlayed");
-
-                    b.Property<int>("GameId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("GameId");
-
-                    b.ToTable("GamesPlayed");
-                });
-
-            modelBuilder.Entity("SaturdayMP.GameTracker.Models.GameResultType", b =>
+            modelBuilder.Entity("SaturdayMP.GameTracker.Models.GameResultTypes", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -75,14 +59,6 @@ namespace SaturdayMP.GameTracker.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Players");
-                });
-
-            modelBuilder.Entity("SaturdayMP.GameTracker.Models.GamePlayed", b =>
-                {
-                    b.HasOne("SaturdayMP.GameTracker.Models.Game", "Game")
-                        .WithMany("GamesPlayed")
-                        .HasForeignKey("GameId")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

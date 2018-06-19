@@ -49,28 +49,6 @@ namespace SaturdayMP.GameTracker.Migrations
                     b.ToTable("GamesPlayed");
                 });
 
-            modelBuilder.Entity("SaturdayMP.GameTracker.Models.GamePlayer", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("GamePlayedId");
-
-                    b.Property<int>("GameResultTypeId");
-
-                    b.Property<int>("PlayerId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("GamePlayedId");
-
-                    b.HasIndex("GameResultTypeId");
-
-                    b.HasIndex("PlayerId");
-
-                    b.ToTable("GamePlayers");
-                });
-
             modelBuilder.Entity("SaturdayMP.GameTracker.Models.GameResultType", b =>
                 {
                     b.Property<int>("Id")
@@ -104,24 +82,6 @@ namespace SaturdayMP.GameTracker.Migrations
                     b.HasOne("SaturdayMP.GameTracker.Models.Game", "Game")
                         .WithMany("GamesPlayed")
                         .HasForeignKey("GameId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("SaturdayMP.GameTracker.Models.GamePlayer", b =>
-                {
-                    b.HasOne("SaturdayMP.GameTracker.Models.GamePlayed", "GamePlayed")
-                        .WithMany("GamePlayers")
-                        .HasForeignKey("GamePlayedId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("SaturdayMP.GameTracker.Models.GameResultType", "GameResultType")
-                        .WithMany()
-                        .HasForeignKey("GameResultTypeId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("SaturdayMP.GameTracker.Models.Player", "Player")
-                        .WithMany("GamesPlayers")
-                        .HasForeignKey("PlayerId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

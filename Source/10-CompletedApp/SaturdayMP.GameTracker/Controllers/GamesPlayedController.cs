@@ -65,7 +65,7 @@ namespace SaturdayMP.GameTracker.Controllers
                 _context.Add(gamePlayed);
                 await _context.SaveChangesAsync();
 
-                return RedirectToAction(nameof(Edit), gamePlayed.Id);
+                return RedirectToAction(nameof(Edit), new { id = gamePlayed.Id });
             }
             ViewData["GameId"] = new SelectList(_context.Games, "Id", "Name", gamePlayed.GameId);
             return View(gamePlayed);

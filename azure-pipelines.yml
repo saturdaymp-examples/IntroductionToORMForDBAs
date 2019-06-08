@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'windows-2019'
 
 variables:
   solution: '**/*.sln'
@@ -15,6 +15,14 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+# Install .NET 2.0.9.  Not supported anymore but
+# is what we want to upgrade to too to fix the security
+# issues.  After the build is working we will upgrade
+# to a support .NET version.
+- task: DotNetCoreInstaller@0
+  inputs:
+    version: '2.1.202'
+
 - task: NuGetToolInstaller@0
 
 - task: NuGetCommand@2
